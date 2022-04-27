@@ -163,7 +163,9 @@ header .name{
     margin-top: 5em;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2em;
     padding: 0 4em;
+
 }
 
 .logos img{
@@ -201,7 +203,7 @@ header .name{
 @media only screen and (max-width:1201px){
     .logos{
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 4em;
+        
     }
 }
 
@@ -212,13 +214,36 @@ header .name{
         width: fit-content;   
         margin-left: auto;
         margin-right: auto;
+        gap: 1em;
+    }
+}
+
+@media only screen and (max-width:769px){
+    
+    .logos{
+        grid-template-columns: 1fr 1fr ;
+        width: fit-content;   
+        margin-left: auto;
+        margin-right: auto;
+        gap: 1em;
+    }
+}
+
+@media only screen and (max-width:480px){
+    
+    .logos{
+        grid-template-columns: 1fr  ;
+        width: fit-content;   
+        margin-left: auto;
+        margin-right: auto;
+        gap: 1em;
     }
 }
 
 .projects img{
     height: 500px;
     width: 450px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .projectCards{
@@ -244,14 +269,15 @@ header .name{
     padding: 0;
     font-weight: 200;
 }
-.projects button{
+.projectButton{
+
     padding:1em;
     border: 1px solid purple;
     cursor: pointer;
     color: purple;
 }
 
-.projects button:hover{
+.projectButton:hover{
     background-color: #653abd;
     color: white;
     border-color: #653abd;
@@ -259,6 +285,9 @@ header .name{
     transition-delay: 100ms;
     transition-duration: 300ms;
     transition-timing-function: ease-out;
+}
+.link{
+    margin-bottom: 1em;
 }
 @media only screen and (max-width:1024px){
     .projects img{
@@ -381,3 +410,4 @@ header .name{
     display: none;
     cursor: pointer;
 }
+
